@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Feedback Semi-Integral · 2º Semestre 2026</title>
-<meta name="description" content="O que a turma do 4º e 5º ano do Semi-Integral achou do 2º semestre de 2026.">
+<meta name="description" content="Apresentação interativa: o que a turma do 4º e 5º ano do Semi-Integral achou do 2º semestre de 2026.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
@@ -17,48 +17,16 @@
   <span class="shape s4">☁️</span><span class="shape s5">✏️</span><span class="shape s6">🌈</span>
 </div>
 
-<header class="hero">
-  <p class="tag pop">4º e 5º ano · 2º Semestre 2026</p>
-  <h1 class="title">
-    <span class="word">Feedback</span>
-    <span class="word accent">Semi-Integral</span>
-  </h1>
-  <p class="subtitle pop">A turma falou, a gente ouviu! 👂💬</p>
-  <nav class="jump pop">
-    <a href="#bao" class="btn btn-green">😍 Tá bão demais</a>
-    <a href="#miora" class="btn btn-orange">💡 Pode miorá</a>
-  </nav>
-  <div class="scroll-hint" aria-hidden="true">⬇</div>
-</header>
+<main id="deck" aria-live="polite"></main>
 
-<section class="stats reveal">
-  <div class="stat"><span class="num" data-count="bao">0</span><span class="lbl">coisas que tão bão demais</span></div>
-  <div class="stat"><span class="num" data-count="miora">0</span><span class="lbl">ideias pra miorá</span></div>
-  <div class="stat"><span class="num" data-count="parque">0</span><span class="lbl">vezes que falaram de <b>parque</b> 🛝</span></div>
-  <div class="stat"><span class="num" data-count="decoracao">0</span><span class="lbl">vezes que falaram de <b>decoração</b> 🎉</span></div>
-</section>
-
-<section id="bao" class="board board-green">
-  <h2 class="board-title reveal"><span class="big-emoji">😍</span> “Isso aqui tá bão demais”</h2>
-  <p class="board-sub reveal">O que a turma ama no Semi</p>
-  <div class="cards" id="cards-bao"></div>
-</section>
-
-<section id="miora" class="board board-orange">
-  <h2 class="board-title reveal"><span class="big-emoji">💡</span> “Pode miorá”</h2>
-  <p class="board-sub reveal">Ideias e pedidos da turma</p>
-  <div class="cards" id="cards-miora"></div>
-</section>
-
-<section class="cloud-section reveal">
-  <h2 class="board-title">☁️ Do que mais se falou</h2>
-  <div class="word-cloud" id="cloud"></div>
-</section>
-
-<footer class="footer reveal">
-  <p class="hug">Grande abraço! 🤗</p>
-  <button class="btn btn-purple" id="party">🎉 Comemorar!</button>
-</footer>
+<div class="progress" aria-hidden="true"><div id="bar"></div></div>
+<nav class="controls" aria-label="Navegação da apresentação">
+  <button id="prev" class="ctrl" aria-label="Slide anterior">◀</button>
+  <span id="counter" class="counter">1 / 1</span>
+  <button id="next" class="ctrl" aria-label="Próximo slide">▶</button>
+  <button id="fs" class="ctrl small" aria-label="Tela cheia" title="Tela cheia (F)">⛶</button>
+</nav>
+<p class="hint" id="hint">Use ← → , espaço, clique ou deslize para navegar</p>
 
 <script src="script.js"></script>
 </body>
